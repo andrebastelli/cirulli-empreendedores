@@ -98,24 +98,38 @@ export default function App() {
             </div>
           </div>
           <div className="md:col-span-5 relative hidden md:block">
-            <div className="relative aspect-square">
-              <div className="absolute inset-0 rounded-2xl gold-bg opacity-20 blur-3xl" aria-hidden="true" />
-              <div className="absolute inset-4 rounded-2xl card-premium p-8 flex flex-col justify-between">
-                <div>
-                  <div className="text-xs tracking-[0.3em] text-[color:var(--gold)] font-bold">COLEÇÃO 2026</div>
-                  <div className="mt-2 text-3xl font-extrabold leading-tight">+500 peças<br />novas todo mês</div>
-                </div>
-                <div className="space-y-3">
-                  {["Colares", "Brincos", "Pulseiras", "Anéis"].map((t) => (
-                    <div key={t} className="flex items-center justify-between border-t border-[color:var(--border)]/60 pt-3">
-                      <span className="text-sm text-[color:var(--muted-foreground)]">{t}</span>
-                      <span className="text-sm font-bold gold-text">Em alta</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+  <div className="relative">
+    
+    <div
+      aria-hidden
+      className="absolute -left-6 -top-6 h-28 w-28 border border-[color:var(--gold)]/40 md:-left-10 md:-top-10 md:h-40 md:w-40"
+    />
+
+    <img
+  src="/hero-jewelry.jpg"
+  alt="Coleção de semijoias"
+  width={1080}
+  height={1600}
+  fetchPriority="high"
+  decoding="async"
+  className="relative w-full rounded-2xl object-cover shadow-2xl"
+/>
+
+    <div
+      aria-hidden
+      className="absolute -bottom-6 -right-6 hidden rounded-xl bg-[color:var(--card)] p-5 text-[color:var(--foreground)] shadow-2xl md:block"
+    >
+      <p className="font-display text-lg italic leading-snug">
+  "Depois de mais de 10 anos<br />
+  no mercado, sei o que vende."
+</p>
+
+<p className="mt-2 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-[color:var(--gold)]">
+  Patrícia — Especialista em Semijoias
+</p>
+    </div>
+  </div>
+</div>
         </div>
       </section>
 
