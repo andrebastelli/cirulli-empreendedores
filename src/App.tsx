@@ -584,10 +584,14 @@ export default function App() {
         <p className="mt-6 text-lg text-[color:var(--muted-foreground)] max-w-2xl mx-auto">
           Fale agora com um especialista e descubra o mix, as condições e o ritmo de reposição que vão destravar o crescimento da sua loja.
         </p>
-        <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
-          className="mt-12 inline-flex items-center gap-3 px-8 py-4 rounded-md gold-bg text-black font-bold text-base transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(0,174,194,0.35)]">
-          Quero melhorar meu fornecedor →
-        </a>
+        <a
+  href={WHATSAPP_URL}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-[28px] md:mt-[48px] inline-flex items-center justify-center gap-[8px] md:gap-[12px] px-[18px] md:px-[32px] py-[10px] md:py-[16px] rounded-[10px] gold-bg text-black font-bold text-[14px] md:text-[16px] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(0,174,194,0.35)]"
+>
+  Quero conhecer a Cirulli →
+</a>
       </section>
 
       <footer className="border-t border-[color:var(--border)]/60 bg-[color:var(--card)]/40">
