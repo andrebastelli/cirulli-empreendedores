@@ -1,3 +1,18 @@
+import { useEffect, useState } from "react";
+
+export default function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
 const benefits = [
   {
     t: "Mais giro de estoque",
@@ -50,14 +65,24 @@ const WHATSAPP_URL =
   "https://wa.me/5519999999999?text=" +
   encodeURIComponent("Já trabalho com semijoias e quero conhecer as peças e condições.");
 
-export default function App() {
+
   return (
     <main className="min-h-screen">
-      <header className="sticky top-0 z-50 backdrop-blur-md bg-black/70 border-b border-[color:var(--border)]/70">
-        <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between" aria-label="Principal">
-          <a href="#top" className="text-xl font-extrabold tracking-tight" aria-label="Atacado Cirulli">
-            ATACADO <span className="gold-text">CIRULLI</span>
-          </a>
+      <header className="sticky top-0 z-50 backdrop-blur-md bg-black/70 border-b border-[color:var(--border)]/70 transition-all">
+      <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
+        <a href="#top" className="flex items-center" aria-label="Atacado Cirulli">
+          <img
+            src="/logo-cirulli.png"
+            alt="Atacado Cirulli"
+            className={`object-contain transition-all duration-300 ${
+              scrolled ? "h-8" : "h-12"
+            } w-auto`}
+            style={{
+              filter:
+                "sepia(1) saturate(10) hue-rotate(10deg) brightness(1.1) contrast(1.1)",
+            }}
+/>
+    </a>
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-md gold-bg text-black text-sm font-bold hover:opacity-90 transition">
             Falar no WhatsApp
@@ -309,9 +334,16 @@ export default function App() {
       <footer className="border-t border-[color:var(--border)]/60 bg-[color:var(--card)]/40">
         <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between gap-6 text-sm text-[color:var(--muted-foreground)]">
           <div>
-            <div className="text-[color:var(--foreground)] font-extrabold tracking-tight">
-              ATACADO <span className="gold-text">CIRULLI</span>
-            </div>
+            <div className="text-[color:var(--foreground)] font-extrabold tracking-tight flex items-center">
+  <img
+  src="/logo-cirulli.png"
+  alt="Atacado Cirulli"
+  className="h-10 w-auto object-contain"
+  style={{
+    filter: "brightness(0) invert(1)"
+  }}
+/>
+</div>
             <div className="mt-2">Fornecedor de semijoias no atacado — Limeira/SP</div>
           </div>
           <div className="flex flex-col md:items-end gap-2">
