@@ -53,17 +53,13 @@ const WHATSAPP_URL =
 export default function App() {
   return (
     <main className="min-h-screen">
-      <header className="sticky top-0 z-50 backdrop-blur-md bg-black/70 border-b border-[color:var(--border)]/70">
+      <header className="sticky top-0 z-50 backdrop-blur-md bg-white/10 border-b border-white/10">
   <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between" aria-label="Principal">
     <a href="#top" className="flex items-center" aria-label="Atacado Cirulli">
       <img
   src="/logo-cirulli.png"
   alt="Atacado Cirulli"
   className="h-16 w-auto object-contain"
-  style={{
-    filter:
-      "sepia(1) saturate(10) hue-rotate(10deg) brightness(1.1) contrast(1.1)",
-  }}
 />
     </a>
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
@@ -321,10 +317,7 @@ export default function App() {
   <img
   src="/logo-cirulli.png"
   alt="Atacado Cirulli"
-  className="h-10 w-auto object-contain"
-  style={{
-    filter: "brightness(0) invert(1)"
-  }}
+  className="h-14 w-auto object-contain"
 />
 </div>
             <div className="mt-2">Fornecedor de semijoias no atacado — Limeira/SP</div>
