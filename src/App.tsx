@@ -140,7 +140,7 @@ export default function App() {
             <article key={b.t} className="card-premium rounded-xl p-7">
               <div className="w-10 h-10 rounded-md gold-bg mb-5" aria-hidden="true" />
               <h3 className="text-xl font-bold">{b.t}</h3>
-              <p className="mt-2 text-[color:var(--muted-foreground)] leading-relaxed">{b.d}</p>
+              <p className="mt-2 text-[#000] leading-relaxed">{b.d}</p>
             </article>
           ))}
         </div>
