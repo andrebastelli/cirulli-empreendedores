@@ -1,18 +1,3 @@
-import { useEffect, useState } from "react";
-
-export default function Header() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-
 const benefits = [
   {
     t: "Mais giro de estoque",
@@ -65,22 +50,20 @@ const WHATSAPP_URL =
   "https://wa.me/5519999999999?text=" +
   encodeURIComponent("Já trabalho com semijoias e quero conhecer as peças e condições.");
 
-
+export default function App() {
   return (
     <main className="min-h-screen">
-      <header className="sticky top-0 z-50 backdrop-blur-md bg-black/70 border-b border-[color:var(--border)]/70 transition-all">
-      <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
-        <a href="#top" className="flex items-center" aria-label="Atacado Cirulli">
-          <img
-            src="/logo-cirulli.png"
-            alt="Atacado Cirulli"
-            className={`object-contain transition-all duration-300 ${
-              scrolled ? "h-8" : "h-12"
-            } w-auto`}
-            style={{
-              filter:
-                "sepia(1) saturate(10) hue-rotate(10deg) brightness(1.1) contrast(1.1)",
-            }}
+      <header className="sticky top-0 z-50 backdrop-blur-md bg-black/70 border-b border-[color:var(--border)]/70">
+  <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between" aria-label="Principal">
+    <a href="#top" className="flex items-center" aria-label="Atacado Cirulli">
+      <img
+  src="/logo-cirulli.png"
+  alt="Atacado Cirulli"
+  className="h-16 w-auto object-contain"
+  style={{
+    filter:
+      "sepia(1) saturate(10) hue-rotate(10deg) brightness(1.1) contrast(1.1)",
+  }}
 />
     </a>
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
