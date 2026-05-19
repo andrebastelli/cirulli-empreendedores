@@ -174,12 +174,37 @@ export default function App() {
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
-  {benefits.map((b) => {
+          {[
+  {
+    t: "Mais giro de estoque",
+    d: "Coleções que vendem rápido porque seguem o que o mercado está pedindo agora.",
+  },
+  {
+    t: "Aumento de ticket médio",
+    d: "Mix premium permite combinações e upsell natural na sua loja.",
+  },
+  {
+    t: "Cliente engajado",
+    d: "Novidade constante traz o cliente de volta toda semana.",
+  },
+  {
+    t: "Redução de risco",
+    d: "Padrão de qualidade rigoroso elimina troca e reclamação.",
+  },
+  {
+    t: "Previsibilidade real",
+    d: "Você planeja o mês sabendo que a reposição chega no prazo.",
+  },
+  {
+    t: "Atendimento próximo",
+    d: "Um especialista que conhece sua loja, não um atendente diferente toda vez.",
+  },
+].map((b) => {
 
   return (
     <article key={b.t} className="card-premium rounded-xl p-7">
       <div className="w-10 h-10 rounded-md gold-bg mb-5 flex items-center justify-center">
-  <div className="w-5 h-5 text-black">
+  <div className="w-6 h-6 text-black [&>svg]:w-full [&>svg]:h-full">
     {b.icon}
   </div>
 </div>
