@@ -101,9 +101,9 @@ export default function App() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-[12px] px-[28px] py-[16px] rounded-[10px] gold-bg text-black font-bold text-[16px] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(0,174,194,0.35)]"
+            className="inline-flex items-center justify-center gap-[10px] px-[20px] py-[12px] md:px-[28px] md:py-[16px] rounded-[10px] gold-bg text-black font-bold text-[16px] md:text-[16px] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(0,174,194,0.35)]"
           >
-            Quero um fornecedor confiável →
+            Quero mais detalhes →
           </a>
 
           <a
@@ -355,6 +355,16 @@ export default function App() {
     </article>
   );
 })}
+
+<a
+  href={WHATSAPP_URL}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-[32px] md:mt-[48px] mx-auto flex items-center justify-center gap-3 px-[24px] md:px-[32px] py-[12px] md:py-[16px] rounded-[10px] gold-bg text-black font-bold text-[14px] md:text-[16px] transition-all hover:-translate-y-1"
+>
+  Quero mais detalhes →
+</a>
+
         </div>
       </section>
 
@@ -524,9 +534,9 @@ export default function App() {
         href={WHATSAPP_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-[32px] md:mt-[48px] inline-flex items-center gap-3 px-[24px] md:px-[32px] py-[12px] md:py-[16px] rounded-[10px] gold-bg text-black font-bold text-[14px] md:text-[16px] transition-all hover:-translate-y-1"
+        className="mt-[32px] md:mt-[48px] inline-flex items-center gap-3 px-[24px] md:px-[32px] py-[12px] md:py-[16px] rounded-[10px] gold-bg text-black font-bold text-[12px] md:text-[16px] transition-all hover:-translate-y-1"
       >
-        Falar com um especialista →
+        Quero mais detalhes →
       </a>
     </div>
   </div>
