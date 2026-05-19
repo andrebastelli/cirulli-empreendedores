@@ -599,14 +599,15 @@ export default function App() {
 </a>
       </section>
 
-      <footer className="border-t border-[color:var(--border)]/60 bg-[color:var(--card)]/40">
-  <div className="max-w-7xl mx-auto px-[16px] md:px-[24px] py-[40px] md:py-[60px] flex flex-col md:flex-row justify-between gap-[20px] text-[12px] md:text-[14px] text-[color:var(--muted-foreground)]">
+     <footer className="border-t border-[color:var(--border)]/60 bg-[color:var(--card)]/40">
+  <div className="max-w-7xl mx-auto px-[16px] md:px-[24px] py-[40px] md:py-[60px] grid grid-cols-1 md:grid-cols-2 gap-[24px] items-end text-[12px] md:text-[14px] text-[color:var(--muted-foreground)]">
 
-    <div className="text-center md:text-left">
+    {/* ESQUERDA - LOGO + TEXTO */}
+    <div className="text-center md:text-left flex flex-col items-center md:items-start justify-end">
       <img
         src="/logo-cirulli.png"
         alt="Atacado Cirulli"
-        className="h-[48px] md:h-[56px] w-auto object-contain mx-auto md:mx-0"
+        className="h-[48px] md:h-[56px] w-auto object-contain"
       />
 
       <div className="mt-[8px]">
@@ -614,15 +615,22 @@ export default function App() {
       </div>
     </div>
 
-    <div className="flex flex-col items-center md:items-end gap-[6px]">
-      <a href={WHATSAPP_URL} className="hover:text-[color:var(--gold)] transition">
+    {/* DIREITA - WHATSAPP + COPYRIGHT (EMPILHADOS E ALINHADOS NA BASE) */}
+    <div className="flex flex-col items-center md:items-end justify-end gap-[6px]">
+      
+      <a
+        href={WHATSAPP_URL}
+        className="hover:text-[color:var(--gold)] transition font-medium"
+      >
         WhatsApp
       </a>
 
       <span className="text-center md:text-right">
         © {new Date().getFullYear()} Atacado Cirulli. Todos os direitos reservados.
       </span>
+
     </div>
+
   </div>
 </footer>
 
