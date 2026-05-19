@@ -239,7 +239,7 @@ export default function App() {
   />
 
   <img
-    src="/ki.jpg"
+    src="/kit.jpg"
     alt="Kit de semijoias"
     width={1080}
     height={1600}
