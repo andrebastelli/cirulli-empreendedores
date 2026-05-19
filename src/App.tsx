@@ -50,6 +50,8 @@ const WHATSAPP_URL =
   "https://wa.me/5519999999999?text=" +
   encodeURIComponent("Já trabalho com semijoias e quero conhecer as peças e condições.");
 
+  const SITE_URL = "https://atacadocirulli.com.br";
+
 export default function App() {
   return (
     <main className="min-h-screen">
@@ -619,11 +621,11 @@ export default function App() {
     <div className="flex flex-col items-center md:items-end justify-end gap-[6px]">
       
       <a
-        href={WHATSAPP_URL}
-        className="hover:text-[color:var(--gold)] transition font-medium"
-      >
-        WhatsApp
-      </a>
+  href={SITE_URL}
+  className="text-[12px] md:text-[14px] hover:text-[color:var(--gold)] transition font-medium"
+>
+  Visite nosso site
+</a>
 
       <span className="text-center md:text-right">
         © {new Date().getFullYear()} Atacado Cirulli. Todos os direitos reservados.
