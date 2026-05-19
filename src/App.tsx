@@ -70,101 +70,211 @@ export default function App() {
       </header>
 
       <section id="top" className="hero-bg relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 pt-20 pb-24 md:pt-28 md:pb-32 grid md:grid-cols-12 gap-12 items-center">
-          <div className="md:col-span-7">
-            <span className="inline-block text-xs font-bold tracking-[0.25em] text-[color:var(--gold)] uppercase mb-6">
-              Fornecedor estratégico • Limeira/SP
-            </span>
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-[1.05]">
-              Mantenha seu estoque sempre atualizado com <span className="gold-text">semijoias que vendem</span>
-            </h1>
-            <p className="mt-6 text-lg md:text-xl text-[color:var(--muted-foreground)] max-w-2xl">
-              Variedade, qualidade e reposição ágil para quem já vive de vendas. Pare de depender de fornecedor que atrasa, repete coleção e trava o seu giro.
+
+  <div className="max-w-[1280px] mx-auto px-[24px] pt-[80px] pb-[96px] md:pt-[120px] md:pb-[140px]">
+
+    <div className="grid md:grid-cols-12 gap-[48px] md:gap-[64px] items-center">
+
+      {/* ESQUERDA */}
+      <div className="md:col-span-7">
+
+        <span className="inline-block mb-[24px] text-[11px] md:text-[12px] font-bold tracking-[0.25em] uppercase text-[color:var(--gold)]">
+          Fornecedor estratégico • Limeira/SP
+        </span>
+
+        <h1 className="text-[38px] leading-[1.05] md:text-[72px] font-extrabold tracking-[-0.03em]">
+          Mantenha seu estoque sempre atualizado com{" "}
+          <span className="gold-text">
+            semijoias que vendem
+          </span>
+        </h1>
+
+        <p className="mt-[24px] max-w-[760px] text-[17px] leading-[1.7] md:text-[22px] text-[color:var(--muted-foreground)]">
+          Variedade, qualidade e reposição ágil para quem já vive de vendas.
+          Pare de depender de fornecedor que atrasa, repete coleção e trava o seu giro.
+        </p>
+
+        {/* CTAS */}
+        <div className="mt-[40px] flex flex-col sm:flex-row gap-[16px]">
+
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-[12px] px-[28px] py-[16px] rounded-[10px] gold-bg text-black font-bold text-[16px] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(0,174,194,0.35)]"
+          >
+            Quero um fornecedor confiável →
+          </a>
+
+          <a
+            href="#como-funciona"
+            className="inline-flex items-center justify-center gap-[10px] px-[28px] py-[16px] rounded-[10px] border border-[color:var(--border)] font-semibold text-[16px] hover:border-[color:var(--gold)] transition-all duration-300"
+          >
+            Ver como funciona
+          </a>
+
+        </div>
+
+        {/* BENEFÍCIOS */}
+        <div className="mt-[40px] flex flex-col sm:flex-row gap-y-[12px] sm:gap-x-[32px] text-[14px] text-[color:var(--muted-foreground)]">
+
+          <span>✓ Coleções novas toda semana</span>
+
+          <span>✓ Reposição em até 48h</span>
+
+          <span>✓ Padrão de qualidade rigoroso</span>
+
+        </div>
+      </div>
+
+      {/* DIREITA */}
+      <div className="md:col-span-5 relative block">
+
+        <div className="relative">
+
+          <div
+            aria-hidden
+            className="absolute -left-[24px] -top-[24px] md:-left-[40px] md:-top-[40px] h-[110px] w-[110px] md:h-[160px] md:w-[160px] border border-[color:var(--gold)]/40"
+          />
+
+          <img
+            src="/empreendedora.jpg"
+            alt="Especialista em semijoias"
+            width={1080}
+            height={1600}
+            fetchPriority="high"
+            decoding="async"
+            className="relative h-[420px] md:h-[720px] w-full rounded-[24px] object-cover shadow-2xl"
+          />
+
+          <div
+            aria-hidden
+            className="absolute -bottom-[20px] -right-[10px] md:-bottom-[24px] md:-right-[24px] rounded-[16px] bg-[color:var(--card)] px-[18px] py-[16px] md:px-[22px] md:py-[18px] text-[color:var(--foreground)] shadow-2xl"
+          >
+
+            <p className="font-display text-[15px] md:text-[18px] italic leading-[1.5]">
+              "Depois de mais de 10 anos<br />
+              no mercado, sei o que vende."
             </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-7 py-4 rounded-md gold-bg text-black font-bold text-base transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(0,174,194,0.35)]">
-                Quero um fornecedor confiável →
-              </a>
-              <a href="#como-funciona"
-                className="inline-flex items-center gap-2 px-7 py-4 rounded-md border border-[color:var(--border)] font-semibold hover:border-[color:var(--gold)] transition">
-                Ver como funciona
-              </a>
-            </div>
-            <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm text-[color:var(--muted-foreground)]">
-              <span>✓ Coleções novas toda semana</span>
-              <span>✓ Reposição em até 48h</span>
-              <span>✓ Padrão de qualidade rigoroso</span>
-            </div>
+
+            <p className="mt-[10px] text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.2em] text-[color:var(--gold)]">
+              Patrícia — Especialista em Semijoias
+            </p>
+
           </div>
-          <div className="md:col-span-5 relative hidden md:block">
-  <div className="relative">
-    
-    <div
-      aria-hidden
-      className="absolute -left-6 -top-6 h-28 w-28 border border-[color:var(--gold)]/40 md:-left-10 md:-top-10 md:h-40 md:w-40"
-    />
 
-    <img
-  src="/empreendedora.jpg"
-  alt="Coleção de semijoias"
-  width={1080}
-  height={1600}
-  fetchPriority="high"
-  decoding="async"
-  className="relative w-full rounded-2xl object-cover shadow-2xl"
-/>
+        </div>
+      </div>
 
-    <div
-      aria-hidden
-      className="absolute -bottom-6 -right-6 hidden rounded-xl bg-[color:var(--card)] p-5 text-[color:var(--foreground)] shadow-2xl md:block"
-    >
-      <p className="font-display text-lg italic leading-snug">
-  "Depois de mais de 10 anos<br />
-  no mercado, sei o que vende."
-</p>
-
-<p className="mt-2 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-[color:var(--gold)]">
-  Patrícia — Especialista em Semijoias
-</p>
     </div>
   </div>
-</div>
-        </div>
-      </section>
+</section>
 
       <section className="border-y border-[color:var(--border)]/60 bg-[color:var(--card)]/40">
-        <div className="max-w-7xl mx-auto px-6 py-10 grid sm:grid-cols-3 gap-8 text-center">
-          {[{ n: "+1.200", l: "lojistas atendidos" }, { n: "+15 anos", l: "fornecendo semijoias" }, { n: "98%", l: "de recompra mensal" }].map((s) => (
-            <div key={s.l}>
-              <div className="text-3xl md:text-4xl font-extrabold gold-text">{s.n}</div>
-              <div className="text-sm uppercase tracking-widest text-[color:var(--muted-foreground)] mt-2">{s.l}</div>
-            </div>
-          ))}
-        </div>
-      </section>
 
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-extrabold">Lojistas que pararam de perder venda por falta de novidade</h2>
+  <div className="max-w-[1280px] mx-auto px-[24px] py-[48px] md:py-[56px]">
+
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-[40px] md:gap-[24px] text-center">
+
+      {[
+        { n: "+1.200", l: "lojistas atendidos" },
+        { n: "+15 anos", l: "fornecendo semijoias" },
+        { n: "98%", l: "de recompra mensal" },
+      ].map((s) => (
+
+        <div key={s.l}>
+
+          <div className="text-[42px] leading-[1] md:text-[56px] font-extrabold gold-text">
+            {s.n}
+          </div>
+
+          <div className="mt-[10px] text-[11px] md:text-[12px] uppercase tracking-[0.25em] text-[color:var(--muted-foreground)] leading-[1.6]">
+            {s.l}
+          </div>
+
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
-          {[
-            { q: "Em 3 meses dobrei o ticket médio. Cliente vem na loja só pra ver o que chegou de novo.", a: "Camila R.", c: "Loja de semijoias — SP" },
-            { q: "Qualidade absurda. Não tenho mais reclamação de cliente, e a reposição chega antes do que pedi.", a: "Patrícia M.", c: "Revendedora — MG" },
-            { q: "Saí de um fornecedor que sumia. Aqui é parceria de verdade, com previsibilidade.", a: "Juliana T.", c: "Boutique — PR" },
-          ].map((d) => (
-            <article key={d.a} className="card-premium rounded-xl p-6">
-              <div className="text-[color:var(--gold)] mb-3" aria-hidden="true">★★★★★</div>
-              <p className="leading-relaxed">"{d.q}"</p>
-              <footer className="mt-5 pt-5 border-t border-[color:var(--border)]/60">
-                <div className="font-bold">{d.a}</div>
-                <div className="text-sm text-[color:var(--muted-foreground)]">{d.c}</div>
-              </footer>
-            </article>
-          ))}
+
+      ))}
+
+    </div>
+
+  </div>
+
+</section>
+
+      <section className="max-w-[1280px] mx-auto px-[24px] py-[80px] md:py-[110px]">
+
+  {/* HEADER */}
+  <div className="text-center max-w-[760px] mx-auto mb-[56px] md:mb-[72px]">
+
+    <h2 className="text-[34px] leading-[1.1] md:text-[52px] font-extrabold tracking-[-0.03em]">
+      Lojistas que pararam de perder venda por falta de novidade
+    </h2>
+
+  </div>
+
+  {/* DEPOIMENTOS */}
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-[24px]">
+
+    {[
+      {
+        q: "Em 3 meses dobrei o ticket médio. Cliente vem na loja só pra ver o que chegou de novo.",
+        a: "Camila R.",
+        c: "Loja de semijoias — SP",
+      },
+
+      {
+        q: "Qualidade absurda. Não tenho mais reclamação de cliente, e a reposição chega antes do que pedi.",
+        a: "Patrícia M.",
+        c: "Revendedora — MG",
+      },
+
+      {
+        q: "Saí de um fornecedor que sumia. Aqui é parceria de verdade, com previsibilidade.",
+        a: "Juliana T.",
+        c: "Boutique — PR",
+      },
+    ].map((d) => (
+
+      <article
+        key={d.a}
+        className="card-premium rounded-[20px] p-[28px] text-center md:text-left flex flex-col justify-between"
+      >
+
+        <div>
+
+          <div
+            className="text-[color:var(--gold)] mb-[16px] text-[18px]"
+            aria-hidden="true"
+          >
+            ★★★★★
+          </div>
+
+          <p className="text-[16px] md:text-[17px] leading-[1.8]">
+            "{d.q}"
+          </p>
+
         </div>
-      </section>
+
+        <footer className="mt-[28px] pt-[20px] border-t border-[color:var(--border)]/60 text-center md:text-left">
+
+          <div className="font-bold text-[16px]">
+            {d.a}
+          </div>
+
+          <div className="mt-[4px] text-[13px] uppercase tracking-[0.15em] text-[color:var(--muted-foreground)]">
+            {d.c}
+          </div>
+
+        </footer>
+
+      </article>
+
+    ))}
+
+  </div>
+
+</section>
 
       <section className="bg-[color:var(--card)]/30 border-y border-[color:var(--border)]/60">
   <div className="max-w-[1280px] mx-auto px-[24px] py-[80px] grid md:grid-cols-2 gap-[48px] items-center">
@@ -227,16 +337,19 @@ export default function App() {
         <div className="grid md:grid-cols-3 gap-6">
   {benefits.map((b) => {
     return (
-      <article key={b.t} className="card-premium rounded-xl p-7">
-        <div className="w-10 h-10 rounded-md gold-bg mb-5 flex items-center justify-center">
+      <article
+  key={b.t}
+  className="card-premium rounded-[20px] p-[28px] text-center md:text-left"
+>
+        <div className="w-[40px] h-[40px] rounded-[10px] gold-bg mb-[20px] flex items-center justify-center mx-auto md:mx-0">
           <div className="w-5 h-5 text-black">
             {b.icon}
 </div>
 </div>
 
-      <h3 className="text-xl font-bold">{b.t}</h3>
+      <h3 className="text-[22px] font-bold leading-[1.2]">{b.t}</h3>
 
-      <p className="mt-2 text-[color:var(--muted-foreground)] leading-relaxed">
+      <p className="mt-[10px] text-[16px] leading-[1.7] text-[color:var(--muted-foreground)]">
         {b.d}
       </p>
     </article>
@@ -246,42 +359,47 @@ export default function App() {
       </section>
 
       <section className="bg-[color:var(--card)]/30 border-y border-[color:var(--border)]/60">
-  <div className="max-w-7xl mx-auto px-6 py-20">
 
-    <div className="text-center mb-14">
-      <span className="text-xs font-bold tracking-[0.25em] text-[color:var(--gold)] uppercase">
+  <div className="max-w-[1280px] mx-auto px-[24px] py-[80px] md:py-[110px]">
+
+    {/* HEADER */}
+    <div className="text-center max-w-[760px] mx-auto mb-[56px] md:mb-[72px]">
+
+      <span className="text-[11px] md:text-[12px] font-bold tracking-[0.25em] text-[color:var(--gold)] uppercase">
         Por que Cirulli
       </span>
 
-      <h2 className="mt-4 text-3xl md:text-4xl font-extrabold">
+      <h2 className="mt-[16px] text-[34px] leading-[1.1] md:text-[52px] font-extrabold tracking-[-0.03em]">
         O que separa um fornecedor comum de um parceiro estratégico
       </h2>
+
     </div>
 
-    <div className="grid lg:grid-cols-2 gap-12 items-center">
+    {/* CONTEÚDO */}
+    <div className="grid lg:grid-cols-2 gap-[48px] md:gap-[72px] items-center">
 
-      {/* IMAGEM ESQUERDA */}
+      {/* IMAGEM */}
       <div className="relative">
 
-  <div
-    aria-hidden
-    className="absolute -left-6 -top-6 h-28 w-28 border border-[color:var(--gold)]/40 md:-left-10 md:-top-10 md:h-40 md:w-40"
-  />
+        <div
+          aria-hidden
+          className="absolute -left-[24px] -top-[24px] md:-left-[40px] md:-top-[40px] h-[110px] w-[110px] md:h-[160px] md:w-[160px] border border-[color:var(--gold)]/40"
+        />
 
-  <img
-    src="/kit.jpg"
-    alt="Kit de semijoias"
-    width={1080}
-    height={1600}
-    fetchPriority="high"
-    decoding="async"
-    className="relative w-full rounded-2xl object-cover shadow-2xl"
-  />
+        <img
+          src="/kit.jpg"
+          alt="Kit de semijoias"
+          width={1080}
+          height={1600}
+          fetchPriority="high"
+          decoding="async"
+          className="relative h-[340px] md:h-[720px] w-full rounded-[24px] object-cover shadow-2xl"
+        />
 
-</div>
+      </div>
 
-      {/* CARDS DIREITA */}
-      <div className="grid sm:grid-cols-2 gap-6">
+      {/* CARDS */}
+      <div className="grid sm:grid-cols-2 gap-[20px] md:gap-[24px]">
 
         {[
           {
@@ -307,88 +425,126 @@ export default function App() {
             t: "Atendimento dedicado",
             d: "Suporte direto, sem robô e sem espera.",
           },
+
         ].map((d) => (
+
           <div
             key={d.n}
-            className="card-premium rounded-xl p-6"
+            className="card-premium rounded-[20px] p-[28px] text-center md:text-left"
           >
-            <div className="text-3xl font-extrabold gold-text">
-              {d.n}
+
+            <div className="flex justify-center md:justify-start">
+              <div className="text-[38px] leading-none font-extrabold gold-text text-center md:text-left">
+                {d.n}
+              </div>
             </div>
 
-            <h3 className="mt-4 text-lg font-bold">
+            <h3 className="mt-[18px] text-[22px] leading-[1.2] font-bold">
               {d.t}
             </h3>
 
-            <p className="mt-2 text-sm text-[color:var(--muted-foreground)] leading-relaxed">
+            <p className="mt-[10px] text-[16px] leading-[1.7] text-[color:var(--muted-foreground)]">
               {d.d}
             </p>
           </div>
         ))}
-
       </div>
     </div>
   </div>
 </section>
 
-      <section id="como-funciona" className="max-w-7xl mx-auto px-6 py-20">
-        <div className="text-center mb-14">
-          <span className="text-xs font-bold tracking-[0.25em] text-[color:var(--gold)] uppercase">Como funciona</span>
-          <h2 className="mt-4 text-3xl md:text-4xl font-extrabold">Simples como deveria ser</h2>
-        </div>
-        <ol className="grid md:grid-cols-4 gap-6">
-          {[
-            { t: "Escolha as peças", d: "Acesso ao catálogo completo com novidades atualizadas." },
-            { t: "Receba com rapidez", d: "Logística eficiente para o Brasil todo." },
-            { t: "Venda com confiança", d: "Padrão de qualidade que o seu cliente percebe." },
-            { t: "Reponha sem burocracia", d: "Pedido recorrente em minutos, sem mínimos abusivos." },
-          ].map((s, i) => (
-            <li key={s.t} className="relative card-premium rounded-xl p-7">
-              <div className="absolute -top-4 left-7 w-10 h-10 rounded-full gold-bg flex items-center justify-center text-black font-extrabold">{i + 1}</div>
-              <h3 className="mt-3 text-lg font-bold">{s.t}</h3>
-              <p className="mt-2 text-sm text-[color:var(--muted-foreground)] leading-relaxed">{s.d}</p>
-            </li>
-          ))}
-        </ol>
-      </section>
+      <section id="como-funciona" className="max-w-7xl mx-auto px-[16px] md:px-[24px] py-[60px] md:py-[100px]">
+  <div className="text-center md:text-center mb-[40px] md:mb-[56px]">
+    <span className="text-[11px] md:text-[12px] font-bold tracking-[0.25em] text-[color:var(--gold)] uppercase">
+      Como funciona
+    </span>
 
-      <section className="px-6 py-20">
-        <div className="max-w-5xl mx-auto rounded-2xl p-10 md:p-14 text-center relative overflow-hidden border border-[color:var(--border)] bg-[color:var(--card)]">
-          <div className="absolute inset-0 opacity-20 gold-bg blur-3xl" aria-hidden="true" />
-          <div className="relative">
-            <span className="text-xs font-bold tracking-[0.25em] text-[color:var(--gold)] uppercase">Condição para novos parceiros</span>
-            <h2 className="mt-4 text-3xl md:text-5xl font-extrabold">Comece com o que faz sentido para a sua loja</h2>
-            <div className="mt-10 grid sm:grid-cols-3 gap-6 text-left">
-              {[
-                { t: "Pedido mínimo flexível", d: "Sem trava que inviabiliza o teste." },
-                { t: "Coleções atualizadas", d: "Acesso imediato ao mix em alta." },
-                { t: "Suporte contínuo", d: "Especialista acompanhando seu giro." },
-              ].map((o) => (
-                <div key={o.t} className="border-t-2 border-[color:var(--gold)] pt-4">
-                  <div className="font-bold">{o.t}</div>
-                  <div className="text-sm text-[color:var(--muted-foreground)] mt-1">{o.d}</div>
-                </div>
-              ))}
-            </div>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-12 inline-flex items-center gap-3 px-8 py-4 rounded-md gold-bg text-black font-bold text-base transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(0,174,194,0.35)]"
-            >
-              Falar com um especialista →
-            </a>
-          </div>
+    <h2 className="mt-[16px] md:mt-[20px] text-[28px] md:text-[40px] font-extrabold leading-tight">
+      Simples como deveria ser
+    </h2>
+  </div>
+
+  <ol className="grid grid-cols-1 md:grid-cols-4 gap-[16px] md:gap-[24px]">
+    {[
+      { t: "Escolha as peças", d: "Acesso ao catálogo completo com novidades atualizadas." },
+      { t: "Receba com rapidez", d: "Logística eficiente para o Brasil todo." },
+      { t: "Venda com confiança", d: "Padrão de qualidade que o seu cliente percebe." },
+      { t: "Reponha sem burocracia", d: "Pedido recorrente em minutos, sem mínimos abusivos." },
+    ].map((s, i) => (
+      <li
+        key={s.t}
+        className="relative card-premium rounded-[12px] p-[20px] md:p-[28px] text-center md:text-left"
+      >
+        <div className="absolute -top-[14px] left-[20px] md:left-[28px] w-[36px] md:w-[40px] h-[36px] md:h-[40px] rounded-full gold-bg flex items-center justify-center text-black font-extrabold text-[14px]">
+          {i + 1}
         </div>
-      </section>
+
+        <h3 className="mt-[14px] md:mt-[16px] text-[16px] md:text-[18px] font-bold">
+          {s.t}
+        </h3>
+
+        <p className="mt-[8px] text-[13px] md:text-[14px] text-[color:var(--muted-foreground)] leading-relaxed">
+          {s.d}
+        </p>
+      </li>
+    ))}
+  </ol>
+</section>
+
+      <section className="px-[16px] md:px-[24px] py-[60px] md:py-[100px]">
+  <div className="max-w-5xl mx-auto rounded-[16px] md:rounded-[20px] p-[24px] md:p-[56px] text-center relative overflow-hidden border border-[color:var(--border)] bg-[color:var(--card)]">
+
+    <div className="absolute inset-0 opacity-20 gold-bg blur-3xl" aria-hidden="true" />
+
+    <div className="relative">
+      <span className="text-[11px] md:text-[12px] font-bold tracking-[0.25em] text-[color:var(--gold)] uppercase">
+        Condição para novos parceiros
+      </span>
+
+      <h2 className="mt-[16px] md:mt-[20px] text-[26px] md:text-[48px] font-extrabold leading-tight">
+        Comece com o que faz sentido para a sua loja
+      </h2>
+
+      <div className="mt-[32px] md:mt-[40px] grid grid-cols-1 sm:grid-cols-3 gap-[16px] md:gap-[24px] text-left">
+        {[
+          { t: "Pedido mínimo flexível", d: "Sem trava que inviabiliza o teste." },
+          { t: "Coleções atualizadas", d: "Acesso imediato ao mix em alta." },
+          { t: "Suporte contínuo", d: "Especialista acompanhando seu giro." },
+        ].map((o) => (
+          <div key={o.t} className="border-t-2 border-[color:var(--gold)] pt-[12px] md:pt-[16px]">
+            <div className="font-bold text-[14px] md:text-[16px]">{o.t}</div>
+            <div className="text-[12px] md:text-[14px] text-[color:var(--muted-foreground)] mt-[6px]">
+              {o.d}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-[32px] md:mt-[48px] inline-flex items-center gap-3 px-[24px] md:px-[32px] py-[12px] md:py-[16px] rounded-[10px] gold-bg text-black font-bold text-[14px] md:text-[16px] transition-all hover:-translate-y-1"
+      >
+        Falar com um especialista →
+      </a>
+    </div>
+  </div>
+</section>
 
       <section className="bg-[color:var(--card)]/30 border-y border-[color:var(--border)]/60">
-        <div className="max-w-3xl mx-auto px-6 py-20">
-          <div className="text-center mb-12">
-            <span className="text-xs font-bold tracking-[0.25em] text-[color:var(--gold)] uppercase">Perguntas frequentes</span>
-            <h2 className="mt-4 text-3xl md:text-4xl font-extrabold">Tudo que você precisa saber antes de começar</h2>
-          </div>
-          <div className="space-y-3">
+  <div className="max-w-3xl mx-auto px-[16px] md:px-[24px] py-[60px] md:py-[100px]">
+
+    <div className="text-center md:text-center mb-[40px] md:mb-[48px]">
+      <span className="text-[11px] md:text-[12px] font-bold tracking-[0.25em] text-[color:var(--gold)] uppercase">
+        Perguntas frequentes
+      </span>
+
+      <h2 className="mt-[16px] text-[26px] md:text-[36px] font-extrabold">
+        Tudo que você precisa saber antes de começar
+      </h2>
+    </div>
+          <div className="space-y-[10px] md:space-y-[12px]">
             {[
               { q: "Com que frequência saem coleções novas?", a: "Lançamos novidades toda semana, com coleções completas a cada mês para você sempre ter algo novo para mostrar." },
               { q: "Qual a garantia de qualidade das peças?", a: "Toda peça passa por inspeção antes do envio. Trabalhamos com banho de qualidade superior e garantia contra defeito de fabricação." },
@@ -396,17 +552,20 @@ export default function App() {
               { q: "Como funciona o atendimento?", a: "Você fala direto com um especialista pelo WhatsApp — sem robô, sem fila, sem trocar de atendente." },
               { q: "Eu já tenho fornecedor. Vale a pena testar?", a: "Justamente por isso. Você consegue comparar mix, qualidade e prazo sem comprometer o estoque atual — começando pequeno." },
             ].map((f) => (
-              <details key={f.q} className="card-premium rounded-lg p-5 group">
-                <summary className="cursor-pointer font-bold text-base flex justify-between items-center gap-4 list-none">
-                  <span>{f.q}</span>
-                  <span className="text-[color:var(--gold)] text-xl group-open:rotate-45 transition-transform" aria-hidden="true">+</span>
-                </summary>
-                <p className="mt-4 text-[color:var(--muted-foreground)] leading-relaxed">{f.a}</p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
+        <details key={f.q} className="card-premium rounded-[10px] p-[16px] md:p-[20px]">
+          <summary className="cursor-pointer font-bold text-[14px] md:text-[16px] flex justify-between items-center">
+            <span>{f.q}</span>
+            <span className="text-[color:var(--gold)] text-[18px] md:text-[20px]">+</span>
+          </summary>
+
+          <p className="mt-[12px] text-[13px] md:text-[14px] text-[color:var(--muted-foreground)] leading-relaxed">
+            {f.a}
+          </p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
 
       <section className="max-w-5xl mx-auto px-6 py-24 text-center">
         <h2 className="text-3xl md:text-5xl font-extrabold leading-tight">
@@ -422,23 +581,31 @@ export default function App() {
       </section>
 
       <footer className="border-t border-[color:var(--border)]/60 bg-[color:var(--card)]/40">
-        <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between gap-6 text-sm text-[color:var(--muted-foreground)]">
-          <div>
-            <div className="text-[color:var(--foreground)] font-extrabold tracking-tight flex items-center">
-  <img
-  src="/logo-cirulli.png"
-  alt="Atacado Cirulli"
-  className="h-14 w-auto object-contain"
-/>
-</div>
-            <div className="mt-2">Fornecedor de semijoias no atacado — Limeira/SP</div>
-          </div>
-          <div className="flex flex-col md:items-end gap-2">
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-[color:var(--gold)] transition">WhatsApp</a>
-            <span>© {new Date().getFullYear()} Atacado Cirulli. Todos os direitos reservados.</span>
-          </div>
-        </div>
-      </footer>
+  <div className="max-w-7xl mx-auto px-[16px] md:px-[24px] py-[40px] md:py-[60px] flex flex-col md:flex-row justify-between gap-[20px] text-[12px] md:text-[14px] text-[color:var(--muted-foreground)]">
+
+    <div className="text-center md:text-left">
+      <img
+        src="/logo-cirulli.png"
+        alt="Atacado Cirulli"
+        className="h-[48px] md:h-[56px] w-auto object-contain mx-auto md:mx-0"
+      />
+
+      <div className="mt-[8px]">
+        Fornecedor de semijoias no atacado — Limeira/SP
+      </div>
+    </div>
+
+    <div className="flex flex-col items-center md:items-end gap-[6px]">
+      <a href={WHATSAPP_URL} className="hover:text-[color:var(--gold)] transition">
+        WhatsApp
+      </a>
+
+      <span className="text-center md:text-right">
+        © {new Date().getFullYear()} Atacado Cirulli. Todos os direitos reservados.
+      </span>
+    </div>
+  </div>
+</footer>
 
       <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp"
         className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#1ebe5d] text-white flex items-center justify-center shadow-2xl hover:scale-105 transition">
