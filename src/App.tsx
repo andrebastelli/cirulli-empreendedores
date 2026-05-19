@@ -167,24 +167,54 @@ export default function App() {
       </section>
 
       <section className="bg-[color:var(--card)]/30 border-y border-[color:var(--border)]/60">
-        <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <span className="text-xs font-bold tracking-[0.25em] text-[color:var(--gold)] uppercase">O problema real</span>
-            <h2 className="mt-4 text-3xl md:text-4xl font-extrabold">Seu problema nunca foi vender. É o fornecedor.</h2>
-            <p className="mt-6 text-[color:var(--muted-foreground)] text-lg leading-relaxed">
-              Estoque parado, coleção repetida, peça que escurece, reposição que demora. Cada falha do seu fornecedor é um cliente que não volta — e uma venda que vai pro concorrente.
-            </p>
-          </div>
-          <ul className="space-y-4 max-w-md ml-auto">
-            {["Estoque parado virou prejuízo certo no fim do mês", "Falta de novidade fez o cliente perder o interesse", "Peça com qualidade ruim acaba com a sua reputação", "Reposição lenta trava a venda na hora do sim"].map((p) => (
-              <li key={p} className="flex gap-4 card-premium rounded-lg p-4">
-                <span className="text-[color:var(--gold)] text-xl font-bold" aria-hidden="true">✕</span>
-                <span>{p}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+  <div className="max-w-[1280px] mx-auto px-[24px] py-[80px] grid md:grid-cols-2 gap-[48px] items-center">
+
+    <div>
+      <span className="text-[12px] font-bold tracking-[0.25em] text-[color:var(--gold)] uppercase">
+        O problema real
+      </span>
+
+      <h2 className="mt-[16px] text-[32px] md:text-[42px] font-extrabold leading-[1.1]">
+        Seu problema nunca foi vender. É o fornecedor.
+      </h2>
+
+      <p className="mt-[24px] text-[color:var(--muted-foreground)] text-[18px] leading-[1.7]">
+        Estoque parado, coleção repetida, peça que escurece, reposição que demora.
+        Cada falha do seu fornecedor é um cliente que não volta — e uma venda
+        que vai pro concorrente.
+      </p>
+    </div>
+
+    <ul className="space-y-[12px] max-w-[520px] ml-auto">
+
+      {[
+        "Estoque parado virou prejuízo certo no fim do mês",
+        "Falta de novidade fez o cliente perder o interesse",
+        "Peça com qualidade ruim acaba com a sua reputação",
+        "Reposição lenta trava a venda na hora do sim",
+      ].map((p) => (
+
+        <li
+          key={p}
+          className="flex gap-[12px] card-premium rounded-[14px] p-[18px]"
+        >
+          <span
+            className="text-[color:var(--gold)] text-[22px] font-bold"
+            aria-hidden="true"
+          >
+            ✕
+          </span>
+
+          <span className="text-[16px] leading-[1.6]">
+            {p}
+          </span>
+        </li>
+
+      ))}
+
+    </ul>
+  </div>
+</section>
 
       <section className="max-w-7xl mx-auto px-6 py-20">
         <div className="text-center max-w-3xl mx-auto mb-14">
