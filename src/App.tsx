@@ -239,8 +239,8 @@ export default function App() {
   />
 
   <img
-    src="/empreendedora.jpg"
-    alt="Empreendedora de semijoias"
+    src="/ki.jpg"
+    alt="Kit de semijoias"
     width={1080}
     height={1600}
     fetchPriority="high"
