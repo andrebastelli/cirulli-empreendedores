@@ -106,7 +106,7 @@ export default function App() {
     />
 
     <img
-  src="/hero-jewelry.jpg"
+  src="/empreendedora.jpg"
   alt="Coleção de semijoias"
   width={1080}
   height={1600}
@@ -216,27 +216,90 @@ export default function App() {
       </section>
 
       <section className="bg-[color:var(--card)]/30 border-y border-[color:var(--border)]/60">
-        <div className="max-w-7xl mx-auto px-6 py-20">
-          <div className="text-center mb-14">
-            <span className="text-xs font-bold tracking-[0.25em] text-[color:var(--gold)] uppercase">Por que Cirulli</span>
-            <h2 className="mt-4 text-3xl md:text-4xl font-extrabold">O que separa um fornecedor comum de um parceiro estratégico</h2>
+  <div className="max-w-7xl mx-auto px-6 py-20">
+
+    <div className="text-center mb-14">
+      <span className="text-xs font-bold tracking-[0.25em] text-[color:var(--gold)] uppercase">
+        Por que Cirulli
+      </span>
+
+      <h2 className="mt-4 text-3xl md:text-4xl font-extrabold">
+        O que separa um fornecedor comum de um parceiro estratégico
+      </h2>
+    </div>
+
+    <div className="grid lg:grid-cols-2 gap-12 items-center">
+
+      {/* IMAGEM ESQUERDA */}
+      <div className="relative">
+
+  <div
+    aria-hidden
+    className="absolute -left-6 -top-6 h-28 w-28 border border-[color:var(--gold)]/40 md:-left-10 md:-top-10 md:h-40 md:w-40"
+  />
+
+  <img
+    src="/empreendedora.jpg"
+    alt="Empreendedora de semijoias"
+    width={1080}
+    height={1600}
+    fetchPriority="high"
+    decoding="async"
+    className="relative w-full rounded-2xl object-cover shadow-2xl"
+  />
+
+</div>
+
+      {/* CARDS DIREITA */}
+      <div className="grid sm:grid-cols-2 gap-6">
+
+        {[
+          {
+            n: "01",
+            t: "Coleções frequentes",
+            d: "Novidade semanal. Seu cliente sempre encontra algo novo.",
+          },
+
+          {
+            n: "02",
+            t: "Padrão consistente",
+            d: "Mesma qualidade no primeiro e no milésimo pedido.",
+          },
+
+          {
+            n: "03",
+            t: "Reposição inteligente",
+            d: "Quem vende mais, repõe mais rápido. Sem fila.",
+          },
+
+          {
+            n: "04",
+            t: "Atendimento dedicado",
+            d: "Suporte direto, sem robô e sem espera.",
+          },
+        ].map((d) => (
+          <div
+            key={d.n}
+            className="card-premium rounded-xl p-6"
+          >
+            <div className="text-3xl font-extrabold gold-text">
+              {d.n}
+            </div>
+
+            <h3 className="mt-4 text-lg font-bold">
+              {d.t}
+            </h3>
+
+            <p className="mt-2 text-sm text-[color:var(--muted-foreground)] leading-relaxed">
+              {d.d}
+            </p>
           </div>
-          <div className="grid md:grid-cols-4 gap-6">
-            {[
-              { n: "01", t: "Coleções frequentes", d: "Novidade semanal. Seu cliente sempre encontra algo novo." },
-              { n: "02", t: "Padrão consistente", d: "Mesma qualidade no primeiro e no milésimo pedido." },
-              { n: "03", t: "Reposição inteligente", d: "Quem vende mais, repõe mais rápido. Sem fila." },
-              { n: "04", t: "Atendimento dedicado", d: "Suporte direto, sem robô e sem espera." },
-            ].map((d) => (
-              <div key={d.n} className="card-premium rounded-xl p-6">
-                <div className="text-3xl font-extrabold gold-text">{d.n}</div>
-                <h3 className="mt-4 text-lg font-bold">{d.t}</h3>
-                <p className="mt-2 text-sm text-[color:var(--muted-foreground)] leading-relaxed">{d.d}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        ))}
+
+      </div>
+    </div>
+  </div>
+</section>
 
       <section id="como-funciona" className="max-w-7xl mx-auto px-6 py-20">
         <div className="text-center mb-14">
