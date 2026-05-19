@@ -1,3 +1,51 @@
+const benefits = [
+  {
+    t: "Mais giro de estoque",
+    d: "Coleções que vendem rápido porque seguem o que o mercado está pedindo agora.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-5 h-5"><path fill="none" stroke="#000000" strokeLinejoin="round" strokeWidth="1.5" d="m12 12l8.073-4.625M12 12v9.25M12 12L7.963 9.688m12.11-2.313a3.17 3.17 0 0 0-1.165-1.156L16.25 4.696m3.823 2.679c.275.472.427 1.015.427 1.58v6.09a3.15 3.15 0 0 1-1.592 2.736l-5.316 3.046A3.2 3.2 0 0 1 12 21.25M3.926 7.375a3.14 3.14 0 0 0-.426 1.58v6.09c0 1.13.607 2.172 1.592 2.736l5.316 3.046A3.2 3.2 0 0 0 12 21.25M3.926 7.375a3.17 3.17 0 0 1 1.166-1.156l5.316-3.046a3.2 3.2 0 0 1 3.184 0l2.658 1.523M3.926 7.375l4.037 2.313m0 0l8.287-4.992"/>
+      </svg>
+    ),
+  },
+  {
+    t: "Aumento de ticket médio",
+    d: "Mix premium permite combinações e upsell natural na sua loja.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24"><path fill="none" stroke="#000000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 8H3v10h18V8h-1.5m-4-1a3 3 0 1 1-4 4.258M13 6a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z"/></svg>
+    ),
+  },
+  {
+    t: "Cliente engajado",
+    d: "Novidade constante traz o cliente de volta toda semana.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="#000000"><g fill="none" fillRule="evenodd"><path d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z"/><path fill="#000000" d="M16 14a5 5 0 0 1 5 5v2a1 1 0 1 1-2 0v-2a3 3 0 0 0-3-3H8a3 3 0 0 0-3 3v2a1 1 0 1 1-2 0v-2a5 5 0 0 1 5-5h8Zm4-6a1 1 0 0 1 1 1v1h1a1 1 0 1 1 0 2h-1v1a1 1 0 1 1-2 0v-1h-1a1 1 0 1 1 0-2h1V9a1 1 0 0 1 1-1Zm-8-6a5 5 0 1 1 0 10a5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z"/></g></svg>
+    ),
+  },
+  {
+    t: "Redução de risco",
+    d: "Padrão de qualidade rigoroso elimina troca e reclamação.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="#000000"><g fill="#000000"><path d="M2.06 19.253a.5.5 0 0 0 .434.747h17.032a.5.5 0 0 0 .434-.747l-2.27-3.995a4.24 4.24 0 0 1-2.616-.557l1.874 3.3H5.072L11.01 7.548L13 11.05c.004-.953.324-1.83.86-2.534l-2.415-4.252a.5.5 0 0 0-.87 0z"/><path fill-rule="evenodd" d="M14.414 9.49a3.216 3.216 0 0 1 5.631 3.109L22 14.554l-1.3 1.3l-1.954-1.955a3.2 3.2 0 0 1-1.609.385A3.21 3.21 0 0 1 14 11.07m3.216 1.378a1.378 1.378 0 1 0 0-2.756a1.378 1.378 0 0 0 0 2.756" clip-rule="evenodd"/><path d="M14 11.07a3.2 3.2 0 0 1 .414-1.58zM10.25 17v-1.5h1.5V17zm.75-6a.75.75 0 0 0-.75.75v2.5a.75.75 0 0 0 1.5 0v-2.5A.75.75 0 0 0 11 11"/></g></svg>
+    ),
+  },
+  {
+    t: "Previsibilidade real",
+    d: "Você planeja o mês sabendo que a reposição chega no prazo.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 12 12"><path fill="#000000" d="M4.954.433a1.48 1.48 0 0 1 1.98-.101l.112.101l.89.89l1.26.001a1.48 1.48 0 0 1 1.453 1.198l.02.138l.007.143l-.002 1.259l.893.892a1.48 1.48 0 0 1 .19 1.86l-.089.12l-.101.112l-.893.891l.001 1.258c0 .659-.432 1.224-1.056 1.415l-.136.035l-.142.023l-.144.007h-1.26l-.891.892a1.48 1.48 0 0 1-1.86.19l-.12-.089l-.112-.101l-.892-.893l-1.258.001A1.48 1.48 0 0 1 1.35 9.48l-.02-.139l-.006-.142V7.936l-.89-.89a1.48 1.48 0 0 1-.19-1.86l.088-.12l.101-.112l.89-.891l.001-1.26c0-.72.516-1.32 1.198-1.452l.139-.02l.142-.007h1.26l.891-.89zm1.394.711a.49.49 0 0 0-.618-.063l-.078.063L4.476 2.32H2.812a.49.49 0 0 0-.484.404l-.008.088v1.664L1.144 5.652a.49.49 0 0 0-.063.618l.063.078L2.32 7.524v1.674l.008.078a.49.49 0 0 0 .312.372l.083.023l.089.008l1.662-.001l1.178 1.178a.49.49 0 0 0 .618.063l.078-.063l1.178-1.178h1.633l.087-.002a.49.49 0 0 0 .407-.33l.02-.077l.006-.082l-.001-1.661l1.178-1.178a.49.49 0 0 0 .063-.618l-.063-.078l-1.178-1.178V2.812a.49.49 0 0 0-.402-.484l-.088-.008H7.524zm2.256 3.002a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L5.25 6.793l2.646-2.647a.5.5 0 0 1 .708 0"/></svg>
+    ),
+  },
+  {
+    t: "Atendimento próximo",
+    d: "Um especialista que conhece sua loja, não um atendente diferente toda vez.",
+    icon: (
+      <svg
+      xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24"><path fill="#000000" d="M2 11C2 5.477 6.477 1 12 1s10 4.477 10 10v5.154C22 17.8 20.58 19 19 19h-3v-8h4a8 8 0 1 0-16 0h4v8H6.063A2 2 0 0 0 8 20.5h1.564c.316-.453.841-.75 1.436-.75h2a1.75 1.75 0 1 1 0 3.5h-2c-.595 0-1.12-.297-1.436-.75H8a4 4 0 0 1-3.986-3.66C2.874 18.463 2 17.446 2 16.155V11Zm4 6v-4H4v3.154c0 .393.37.846 1 .846h1Zm14-4h-2v4h1c.63 0 1-.453 1-.846V13Z"/>
+      </svg>
+    ),
+  },
+];
+
 const WHATSAPP_URL =
   "https://wa.me/5519999999999?text=" +
   encodeURIComponent("Já trabalho com semijoias e quero conhecer as peças e condições.");
@@ -6,10 +54,18 @@ export default function App() {
   return (
     <main className="min-h-screen">
       <header className="sticky top-0 z-50 backdrop-blur-md bg-black/70 border-b border-[color:var(--border)]/70">
-        <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between" aria-label="Principal">
-          <a href="#top" className="text-xl font-extrabold tracking-tight" aria-label="Atacado Cirulli">
-            ATACADO <span className="gold-text">CIRULLI</span>
-          </a>
+  <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between" aria-label="Principal">
+    <a href="#top" className="flex items-center" aria-label="Atacado Cirulli">
+      <img
+  src="/logo-cirulli.png"
+  alt="Atacado Cirulli"
+  className="h-16 w-auto object-contain"
+  style={{
+    filter:
+      "sepia(1) saturate(10) hue-rotate(10deg) brightness(1.1) contrast(1.1)",
+  }}
+/>
+    </a>
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-md gold-bg text-black text-sm font-bold hover:opacity-90 transition">
             Falar no WhatsApp
@@ -129,20 +185,23 @@ export default function App() {
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
-          {[
-            { t: "Mais giro de estoque", d: "Coleções que vendem rápido porque seguem o que o mercado está pedindo agora." },
-            { t: "Aumento de ticket médio", d: "Mix premium permite combinações e upsell natural na sua loja." },
-            { t: "Cliente engajado", d: "Novidade constante traz o cliente de volta toda semana." },
-            { t: "Redução de risco", d: "Padrão de qualidade rigoroso elimina troca e reclamação." },
-            { t: "Previsibilidade real", d: "Você planeja o mês sabendo que a reposição chega no prazo." },
-            { t: "Atendimento próximo", d: "Um especialista que conhece sua loja, não um atendente diferente toda vez." },
-          ].map((b) => (
-            <article key={b.t} className="card-premium rounded-xl p-7">
-              <div className="w-10 h-10 rounded-md gold-bg mb-5" aria-hidden="true" />
-              <h3 className="text-xl font-bold">{b.t}</h3>
-              <p className="mt-2 text-[color:var(--muted-foreground)] leading-relaxed">{b.d}</p>
-            </article>
-          ))}
+  {benefits.map((b) => {
+    return (
+      <article key={b.t} className="card-premium rounded-xl p-7">
+        <div className="w-10 h-10 rounded-md gold-bg mb-5 flex items-center justify-center">
+          <div className="w-5 h-5 text-black">
+            {b.icon}
+</div>
+</div>
+
+      <h3 className="text-xl font-bold">{b.t}</h3>
+
+      <p className="mt-2 text-[color:var(--muted-foreground)] leading-relaxed">
+        {b.d}
+      </p>
+    </article>
+  );
+})}
         </div>
       </section>
 
@@ -258,9 +317,16 @@ export default function App() {
       <footer className="border-t border-[color:var(--border)]/60 bg-[color:var(--card)]/40">
         <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between gap-6 text-sm text-[color:var(--muted-foreground)]">
           <div>
-            <div className="text-[color:var(--foreground)] font-extrabold tracking-tight">
-              ATACADO <span className="gold-text">CIRULLI</span>
-            </div>
+            <div className="text-[color:var(--foreground)] font-extrabold tracking-tight flex items-center">
+  <img
+  src="/logo-cirulli.png"
+  alt="Atacado Cirulli"
+  className="h-10 w-auto object-contain"
+  style={{
+    filter: "brightness(0) invert(1)"
+  }}
+/>
+</div>
             <div className="mt-2">Fornecedor de semijoias no atacado — Limeira/SP</div>
           </div>
           <div className="flex flex-col md:items-end gap-2">
