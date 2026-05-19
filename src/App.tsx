@@ -63,7 +63,7 @@ export default function App() {
 />
     </a>
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-md gold-bg text-black text-sm font-bold hover:opacity-90 transition">
+            className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-md gold-bg text-black text-sm font-bold transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(0,174,194,0.35)]">
             Falar no WhatsApp
           </a>
         </nav>
@@ -83,7 +83,7 @@ export default function App() {
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-7 py-4 rounded-md gold-bg text-black font-bold text-base hover:opacity-90 transition shadow-[0_10px_40px_-10px_rgba(212,169,74,0.5)]">
+                className="inline-flex items-center gap-3 px-7 py-4 rounded-md gold-bg text-black font-bold text-base transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(0,174,194,0.35)]">
                 Quero um fornecedor confiável →
               </a>
               <a href="#como-funciona"
@@ -175,9 +175,9 @@ export default function App() {
               Estoque parado, coleção repetida, peça que escurece, reposição que demora. Cada falha do seu fornecedor é um cliente que não volta — e uma venda que vai pro concorrente.
             </p>
           </div>
-          <ul className="space-y-4">
+          <ul className="space-y-4 max-w-md ml-auto">
             {["Estoque parado virou prejuízo certo no fim do mês", "Falta de novidade fez o cliente perder o interesse", "Peça com qualidade ruim acaba com a sua reputação", "Reposição lenta trava a venda na hora do sim"].map((p) => (
-              <li key={p} className="flex gap-4 card-premium rounded-lg p-5">
+              <li key={p} className="flex gap-4 card-premium rounded-lg p-4">
                 <span className="text-[color:var(--gold)] text-xl font-bold" aria-hidden="true">✕</span>
                 <span>{p}</span>
               </li>
@@ -340,8 +340,12 @@ export default function App() {
                 </div>
               ))}
             </div>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
-              className="mt-12 inline-flex items-center gap-3 px-8 py-4 rounded-md gold-bg text-black font-bold text-base hover:opacity-90 transition">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-12 inline-flex items-center gap-3 px-8 py-4 rounded-md gold-bg text-black font-bold text-base transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(0,174,194,0.35)]"
+            >
               Falar com um especialista →
             </a>
           </div>
@@ -382,7 +386,7 @@ export default function App() {
           Fale agora com um especialista e descubra o mix, as condições e o ritmo de reposição que vão destravar o crescimento da sua loja.
         </p>
         <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
-          className="mt-10 inline-flex items-center gap-3 px-8 py-4 rounded-md gold-bg text-black font-bold text-base hover:opacity-90 transition shadow-[0_10px_40px_-10px_rgba(212,169,74,0.5)]">
+          className="mt-12 inline-flex items-center gap-3 px-8 py-4 rounded-md gold-bg text-black font-bold text-base transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(0,174,194,0.35)]">
           Quero melhorar meu fornecedor →
         </a>
       </section>
