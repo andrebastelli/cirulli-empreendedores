@@ -1,3 +1,70 @@
+const benefits = [
+  {
+    t: "Mais giro de estoque",
+    d: "Coleções que vendem rápido porque seguem o que o mercado está pedindo agora.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M3 17l6-6 4 4 7-7" />
+        <path d="M14 8h6v6" />
+      </svg>
+    ),
+  },
+  {
+    t: "Aumento de ticket médio",
+    d: "Mix premium permite combinações e upsell natural na sua loja.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 7v10" />
+        <path d="M9 10c0-1 1.5-2 3-2s3 1 3 2-1 2-3 2-3 1-3 2 1.5 2 3 2 3-1 3-2" />
+      </svg>
+    ),
+  },
+  {
+    t: "Cliente engajado",
+    d: "Novidade constante traz o cliente de volta toda semana.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </svg>
+    ),
+  },
+  {
+    t: "Redução de risco",
+    d: "Padrão de qualidade rigoroso elimina troca e reclamação.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        <path d="M9 12l2 2 4-4" />
+      </svg>
+    ),
+  },
+  {
+    t: "Previsibilidade real",
+    d: "Você planeja o mês sabendo que a reposição chega no prazo.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 7v5l3 3" />
+      </svg>
+    ),
+  },
+  {
+    t: "Atendimento próximo",
+    d: "Um especialista que conhece sua loja, não um atendente diferente toda vez.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M4 15a8 8 0 0 1 16 0" />
+        <rect x="2" y="15" width="4" height="6" rx="1" />
+        <rect x="18" y="15" width="4" height="6" rx="1" />
+      </svg>
+    ),
+  },
+];
+
 const WHATSAPP_URL =
   "https://wa.me/5519999999999?text=" +
   encodeURIComponent("Já trabalho com semijoias e quero conhecer as peças e condições.");
@@ -130,19 +197,47 @@ export default function App() {
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            { t: "Mais giro de estoque", d: "Coleções que vendem rápido porque seguem o que o mercado está pedindo agora." },
-            { t: "Aumento de ticket médio", d: "Mix premium permite combinações e upsell natural na sua loja." },
-            { t: "Cliente engajado", d: "Novidade constante traz o cliente de volta toda semana." },
-            { t: "Redução de risco", d: "Padrão de qualidade rigoroso elimina troca e reclamação." },
-            { t: "Previsibilidade real", d: "Você planeja o mês sabendo que a reposição chega no prazo." },
-            { t: "Atendimento próximo", d: "Um especialista que conhece sua loja, não um atendente diferente toda vez." },
-          ].map((b) => (
-            <article key={b.t} className="card-premium rounded-xl p-7">
-              <div className="w-10 h-10 rounded-md gold-bg mb-5" aria-hidden="true" />
-              <h3 className="text-xl font-bold">{b.t}</h3>
-              <p className="mt-2 text-[color:var(--muted-foreground)] leading-relaxed">{b.d}</p>
-            </article>
-          ))}
+  {
+    t: "Mais giro de estoque",
+    d: "Coleções que vendem rápido porque seguem o que o mercado está pedindo agora.",
+  },
+  {
+    t: "Aumento de ticket médio",
+    d: "Mix premium permite combinações e upsell natural na sua loja.",
+  },
+  {
+    t: "Cliente engajado",
+    d: "Novidade constante traz o cliente de volta toda semana.",
+  },
+  {
+    t: "Redução de risco",
+    d: "Padrão de qualidade rigoroso elimina troca e reclamação.",
+  },
+  {
+    t: "Previsibilidade real",
+    d: "Você planeja o mês sabendo que a reposição chega no prazo.",
+  },
+  {
+    t: "Atendimento próximo",
+    d: "Um especialista que conhece sua loja, não um atendente diferente toda vez.",
+  },
+].map((b) => {
+
+  return (
+    <article key={b.t} className="card-premium rounded-xl p-7">
+      <div className="w-10 h-10 rounded-md gold-bg mb-5 flex items-center justify-center">
+        <div className="w-5 h-5 text-black">
+</div>
+      </div>
+
+      <h3 className="text-xl font-bold">{b.t}</h3>
+
+      <p className="mt-2 text-[color:var(--muted-foreground)] leading-relaxed">
+        {b.d}
+      </p>
+    </article>
+  );
+})}
         </div>
       </section>
 
