@@ -62,10 +62,15 @@ export default function App() {
   className="h-16 w-auto object-contain"
 />
     </a>
-          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-md gold-bg text-black text-sm font-bold transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(0,174,194,0.35)]">
-            Falar no WhatsApp
-          </a>
+          <a
+  href={WHATSAPP_URL}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center justify-center gap-[6px] sm:gap-[8px] px-[16px] sm:px-[20px] py-[10px] rounded-[10px] gold-bg text-black font-bold text-[10px] sm:text-[14px] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(0,174,174,0.35)]"
+>
+  <span className="sm:hidden">WhatsApp →</span>
+  <span className="hidden sm:inline">Falar no WhatsApp →</span>
+</a>
         </nav>
       </header>
 
