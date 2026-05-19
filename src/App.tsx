@@ -323,7 +323,7 @@ export default function App() {
       </section>
 
       <section className="px-6 py-20">
-        <div className="max-w-5xl mx-auto card-premium rounded-2xl p-10 md:p-14 text-center relative overflow-hidden">
+        <div className="max-w-5xl mx-auto rounded-2xl p-10 md:p-14 text-center relative overflow-hidden border border-[color:var(--border)] bg-[color:var(--card)]">
           <div className="absolute inset-0 opacity-20 gold-bg blur-3xl" aria-hidden="true" />
           <div className="relative">
             <span className="text-xs font-bold tracking-[0.25em] text-[color:var(--gold)] uppercase">Condição para novos parceiros</span>
