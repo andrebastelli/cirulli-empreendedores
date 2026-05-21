@@ -363,14 +363,16 @@ export default function App() {
   );
 })}
 
-<a
-  href={WHATSAPP_URL}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="mt-[32px] md:mt-[48px] mx-auto flex items-center justify-center gap-3 px-[24px] md:px-[32px] py-[12px] md:py-[16px] rounded-[10px] gold-bg text-black font-bold text-[14px] md:text-[16px] transition-all hover:-translate-y-1"
->
-  Quero mais detalhes →
-</a>
+<div className="mt-[32px] md:mt-[48px] flex justify-center">
+  <a
+    href={WHATSAPP_URL}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-center gap-3 px-[24px] md:px-[32px] py-[12px] md:py-[16px] rounded-[10px] gold-bg text-black font-bold text-[14px] md:text-[16px] transition-all hover:-translate-y-1"
+  >
+    Quero mais detalhes →
+  </a>
+</div>
 
         </div>
       </section>
